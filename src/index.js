@@ -1,3 +1,5 @@
-import { camelCase } from 'lodash' ;
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1)
+}
 
-console.log(camelCase("hellow orld"));
+module.exports = {capitalize}
