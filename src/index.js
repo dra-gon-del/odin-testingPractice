@@ -41,4 +41,4 @@ function analyzeArray(arr) {
     return {average, min, max, length}
 }
 
-module.exports = {capitalize, reverseString, calculator, caesarCipher, analyzeArray}
+module.exports = {capitalize, reverseString, calculator, caesarCipher, analyzeArray};
