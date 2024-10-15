@@ -32,4 +32,13 @@ function caesarCipher(str, shift) {
     return String.fromCharCode(...charCodes);  
 }
 
-module.exports = {capitalize, reverseString, calculator, caesarCipher}
+function analyzeArray(arr) {
+    const sum = arr.reduce((arr, val) => arr + val, 0);
+    const average = sum / arr.length;
+    const min = Math.min(...arr);
+    const max = Math.max(...arr);
+    const length = arr.length;
+    return {average, min, max, length}
+}
+
+module.exports = {capitalize, reverseString, calculator, caesarCipher, analyzeArray}
