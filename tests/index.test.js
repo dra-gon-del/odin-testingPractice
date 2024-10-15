@@ -1,4 +1,4 @@
-const {capitalize} = require('../src/index')
+const {capitalize , reverseString, calculator} = require('../src/index')
 
 describe('capitalize', () => {
     test('capitalizes the first character of a string', () => {
@@ -17,15 +17,30 @@ describe('capitalize', () => {
 
 describe('reverseString', () => {
     test('reverses a common string', () => {
-        expect(capitalize('hello')).toBe('olleh');
+        expect(reverseString('hello')).toBe('olleh');
     })
     test('capitalizes a single character', () => {
-        expect(capitalize('a')).toBe('a');
+        expect(reverseString('a')).toBe('a');
     })
     test('works with empty string', () => {
-        expect(capitalize('')).toBe('');
+        expect(reverseString('')).toBe('');
     })
     test('reverses correctly a string with punctuation', () => {
-        expect(capitalize('Hello!')).toBe('olleH!');
+        expect(reverseString('Hello!')).toBe('!olleH');
+    })
+});
+
+describe('calculator', () => {
+    test('Test Addition', () => {
+        expect(calculator.add(2, 3)).toBe(5);
+    })
+    test('Test Subtraction', () => {
+        expect(calculator.subtract(5, 3)).toBe(2);
+    })
+    test('Test Multiplication', () => {
+        expect(calculator.multiply(2, 3)).toBe(6);
+    })
+    test('Test Division', () => {
+        expect(calculator.divide(6, 3)).toBe(2);
     })
 });
